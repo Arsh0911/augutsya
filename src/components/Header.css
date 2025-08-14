@@ -1,0 +1,93 @@
+/* Base */
+.header.widget-header .nav {
+  background-color: #000000 !important;
+  color: #fff !important;
+}
+#mainnav > ul > li > a,
+#header .show-search a i,
+.show-search.active .fa-search:before,
+#header .wrap-cart-count a,
+.btn-menu:before,
+.btn-menu:after,
+.btn-menu span {
+  color: #fff;
+}
+
+/* Layout helpers */
+.container-fluid { width: 100%; padding: 0 16px; }
+.row { display: flex; flex-wrap: wrap; }
+.col-12 { flex: 0 0 100%; max-width: 100%; }
+.header-style2 { position: sticky; top: 0; z-index: 50; }
+.header-wrap { display:flex; align-items:center; justify-content:space-between; padding: 12px 0; }
+.brand .logo { padding-top: 14px; color:#fff; text-decoration:none; font-weight:700; }
+.nav-wrap ul { display:flex; gap: 20px; list-style:none; margin:0; padding:0; }
+.nav-wrap a { line-height: 54px; text-decoration:none; color:#fff; }
+.nav-wrap li:hover > a,
+.nav-wrap .active { color:#dd3333 !important; }
+
+/* TradingView */
+.TradingViewWidget { position: relative; height: 46px !important; }
+.tradingview-widget-copyright { display:none !important; }
+
+/* News strip */
+.table_main_news {
+  display: grid;
+  grid-template-columns: 108px 1fr auto auto;
+  align-items: stretch;
+  margin: -10px 0 0 0;
+  padding: 0;
+  z-index: 9999999999;
+}
+.breaking_news {
+  background: red;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 90%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.main_news {
+  text-align: left;
+  background: yellow;
+  padding: 0 0 0 20px;
+  overflow: hidden;
+}
+.news-marquee { position: relative; height: 30px; overflow: hidden; }
+.news-track {
+  display: inline-flex;
+  gap: 32px;
+  white-space: nowrap;
+  animation: scroll-left 25s linear infinite;
+  align-items: center;
+  height: 30px;
+}
+.news-item { display:inline-block; }
+@keyframes scroll-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Weather & clock */
+.weather-box { background: #2070c9; display:flex; align-items:center; padding: 0 8px; }
+.weather-box img { display:block; height: 30px; width: auto; }
+.clock-box {
+  background:#000; color:#fff; font-weight:500;
+  display:flex; align-items:center; padding: 0 10px;
+}
+
+/* Utilities */
+#cover { position: relative; top: 26px; min-height: 98px; width: 100%; z-index: 9999; }
+.myzindex { z-index: 9999; }
+
+/* Tables reset (from original) */
+table, th, td { margin:0 !important; padding:0 !important; border:none !important; }
+th, td { padding: 0 !important; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  #augutsyaclockbox, #augutsyaweather { display:none !important; }
+  #cover { top: 0 !important; min-height: 31px !important; }
+  .header-style2 .nav-wrap .btn-menu { margin: 19px 0 0 0 !important; }
+}

@@ -1,0 +1,86 @@
+/* Wrapper */
+.utilities {
+  padding: 44px 16px;
+  background: #f7f9fc;
+}
+
+.utilities__container {
+  width: min(1200px, 94%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Heading */
+.utilities__title {
+  margin: 0 0 20px;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: #0f3661;
+}
+
+/* Grid */
+.utilities__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+/* Card */
+.utilities__card {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 10px;
+  place-items: center;
+  padding: 16px 12px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #e9eef5;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  text-decoration: none;
+  outline: none;
+}
+
+.utilities__card:hover,
+.utilities__card:focus-visible {
+  transform: translateY(-2px);
+  border-color: #d7e3f3;
+  box-shadow: 0 8px 22px rgba(15, 54, 97, 0.08);
+}
+
+/* Logo */
+.utilities__img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain; /* keeps logos inside without cropping */
+  display: block;
+}
+
+/* Label */
+.utilities__label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #102a43;
+  line-height: 1.2;
+  text-align: center;
+  word-break: break-word;
+}
+
+/* Dark mode (optional) */
+@media (prefers-color-scheme: dark) {
+  .utilities {
+    background: #0b1220;
+  }
+  .utilities__title {
+    color: #d9e6ff;
+  }
+  .utilities__card {
+    background: #0f172a;
+    border-color: #1f2a44;
+  }
+  .utilities__label {
+    color: #e5edff;
+  }
+}
