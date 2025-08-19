@@ -58,7 +58,7 @@ export default function Home() {
       <HeroSlider />
       <Container>
         <ServicesCarousel />
-        <FeaturedProducts />
+        
       </Container>
     </main>
   );
@@ -90,7 +90,7 @@ export default function Home() {
     <section className="hero">
       <div className="hero__content container">
         <div className="hero__left">
-          <div className="badge">AUGUTSYA</div>
+          {/* <div className="badge">AUGUTSYA</div> */}
           <h1 className="hero__title">{slide.title}</h1>
 
           <ul className="hero__bullets">
@@ -192,19 +192,4 @@ function ServicesCarousel() {
 
 /* ------------------------- FEATURED PRODUCTS ------------------------ */
 
-function FeaturedProducts() {
-  return (
-    <section className="section">
-      <div className="section__head">
-        <h2 className="section__title">Featured in Store</h2>
-        <a href="/store" className="seeAll">See all</a>
-      </div>
 
-      <div className="productsGrid">
-        {products.slice(0, 6).map((p) => (
-          <ProductCard key={p.id} product={p} />
-        ))}
-      </div>
-    </section>
-  );
-}

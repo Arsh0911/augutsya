@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import Store from './pages/Store';
 import Utilities from './pages/Utilities';
-import Hero from 'components/Hero'; 
 import ContactUs from './pages/Contact-us';
 import AboutUs from './pages/About-us'; 
 
@@ -25,7 +24,6 @@ export default function App() {
         <Route path="/utilities" element={<Utilities />} />
         <Route path="/contact-us" element={<ContactUs />} />
        <Route path="/about" element={<AboutUs />} />
-        <Route path="/hero" element={<Hero />} /> 
         
       </Routes>
       <Footer />

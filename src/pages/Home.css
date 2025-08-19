@@ -10,10 +10,15 @@
   --shadow: 0 10px 30px rgba(2,6,23,.25);
 }
 
-.home{
-  background: radial-gradient(1200px 500px at 70% -100px, rgba(79,70,229,.25), transparent 60%) , var(--bg);
+.home {
+    background:
+    radial-gradient(1200px 400px at 50% -10%, rgba(108,123,255,.25), transparent 60%),
+    linear-gradient(180deg,#0d1330 0%,#0b1020 60%);
   color: var(--text);
 }
+
+
+
 
 /* ---------- Layout helpers ---------- */
 .container{
@@ -122,20 +127,24 @@
   position: relative;
   display: grid;
   justify-items: center;
+  /* background-color: #22d3ee; */
+  ;
 }
 .hero__imageWrap{
-  width: min(520px, 100%);
+   /* width: min(700px, 100%);/ */
+   width: 700px;
+  height: 600px;
   aspect-ratio: 1 / 1;
   border-radius: 28px;
-  background: radial-gradient(600px 240px at 60% -140px, rgba(34,211,238,.25), transparent 60%), var(--card);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+  /* background: radial-gradient(600px 240px at 60% -140px, rgba(34,211,238,.25), transparent 60%), var(--card); */
+  /* border: 1px solid var(--border); */
+  /* box-shadow: var(--shadow); */
   display: grid;
   place-items: center;
   overflow: hidden;
 }
 .hero__image{
-  width: 92%;
+  width: 100%;
   height: auto;
   object-fit: contain;
   user-select: none;
@@ -169,6 +178,7 @@
 /* ================= SECTIONS ================= */
 .section{
   padding: 40px 0 14px;
+  ;
 }
 .section__head{
   display: flex; align-items: center; justify-content: space-between;
