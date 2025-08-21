@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import "./Header.css";
 
+import NewsTickerHindi from "pages/NewsTickerHindi";
 
 /* ---------- TradingView tape ---------- */
 function TradingViewTape() {
@@ -197,7 +198,7 @@ function NewsStrip({ newsItems = [] }) {
 
       <div className="main_news">
         {/* Use your NewsTicker here */}
-       
+       <NewsTickerHindi />
       </div>
 
       <div
