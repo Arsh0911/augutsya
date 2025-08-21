@@ -11,9 +11,12 @@ import Services from "./Services";
 const HERO_SLIDES = [
   {
     title: "Accounting",
+    
     bullets: ["Accurate records", "Tax compliance", "Financial insights"],
     img: `${process.env.PUBLIC_URL}/accounting.png`,
+   
   },
+  
   {
     title: "App Development",
     bullets: ["iOS & Android", "Custom solutions", "Scalable apps"],
@@ -55,6 +58,7 @@ const HERO_SLIDES = [
 export default function Home() {
   return (
     <main className="home">
+      
       <HeroSlider />
       <Container>
         <ServicesCarousel />
@@ -88,6 +92,7 @@ export default function Home() {
 
   return (
     <section className="hero">
+      
       <div className="hero__content container">
         <div className="hero__left">
           {/* <div className="badge">AUGUTSYA</div> */}
@@ -106,7 +111,7 @@ export default function Home() {
             <a className="btn btn--primary" href="/contact">
               Get Consultation
             </a>
-            <a className="btn btn--ghost" href="/about">
+            <a className="btn btn--primary" href="/about">
               Learn more
             </a>
           </div>

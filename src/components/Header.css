@@ -12,17 +12,11 @@
 }
 
 header.header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  color: var(--header-txt);
-  background: var(--header-bg);
-  box-shadow: 0 6px 24px rgba(2, 8, 23, 0.45);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: saturate(120%) blur(6px);
-  -webkit-backdrop-filter: saturate(120%) blur(6px);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f1f5f9;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
 }
+
 
 /* Container primitives (if you don’t use Bootstrap grid) */
 .header .container-fluid { width: min(100%, 92%); margin: 0 auto; }
@@ -62,8 +56,8 @@ header.header {
   border: 1px solid var(--border);
   border-radius: 999px;
   color: white;
-  background:
-    linear-gradient(90deg, rgba(59,130,246,.25), rgba(34,211,238,.25));
+  background: blue
+    ;
 }
 
 .main_news {
@@ -97,11 +91,11 @@ header.header {
 .clock-box {
   font-variant-numeric: tabular-nums;
   font-size: 14px;
-  color: var(--muted);
+  color: white;
   padding: 6px 10px;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: rgba(15, 23, 42, 0.55);
+  background: blue;
 }
 
 /* ====== Main header row ====== */
@@ -153,19 +147,21 @@ header.header {
   padding: 8px 2px;
   font-weight: 600;
   letter-spacing: .02em;
-  color: var(--header-txt);
+  color: black;
   text-decoration: none;
   transition: color .18s ease;
 }
-#mainnav .menu-item a:hover { color: white; }
+#mainnav .menu-item a:hover { color: rgb(11, 0, 134);
+background-color: #f6b83b ; 
+border-radius: 15px; }
 
 /* Active underline */
-#mainnav .menu-item a::after {
+/* #mainnav .menu-item a::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: 0;
   height: 2px; transform: scaleX(0); transform-origin: left;
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
   transition: transform .22s ease;
-}
+} */
 #mainnav .menu-item a:hover::after,
 #mainnav .menu-item.current-menu-item a::after { transform: scaleX(1); }
 

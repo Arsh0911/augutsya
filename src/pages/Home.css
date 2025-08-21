@@ -11,10 +11,12 @@
 }
 
 .home {
-    background:
+  background: #ACACAC;
+  background: linear-gradient(90deg, rgba(172, 172, 172, 1) 0%,rgba(78, 102, 255, 1) 100%)
+    /* background:
     radial-gradient(1200px 400px at 50% -10%, rgba(108,123,255,.25), transparent 60%),
     linear-gradient(180deg,#0d1330 0%,#0b1020 60%);
-  color: var(--text);
+  color: var(--text); */
 }
 
 
@@ -22,10 +24,15 @@
 
 /* ---------- Layout helpers ---------- */
 .container{
-  max-width: 1200px;
+  /* background-color: white; */
+  max-width: 1800px;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
 }
+
+
 
 /* ---------- Buttons ---------- */
 .btn{
@@ -38,26 +45,21 @@
   font-weight: 600;
   transition: .2s ease;
   text-decoration: none;
-  color: var(--text);
-  background: transparent;
+  color: black;
+  background-color: #18ceeae3;
 }
-.btn--primary{
-  background: linear-gradient(135deg, var(--primary), #6ee7b7);
-  border-color: transparent;
-  color: #0b1020;
-}
-.btn--primary:hover{ filter: brightness(1.05); transform: translateY(-1px); }
-.btn--ghost:hover{ border-color: var(--text); }
+
 
 /* ================= HERO ================= */
 .hero{
   position: relative;
-  padding: 56px 0 34px;
+  padding: 66px  46px;
   overflow: hidden;
 }
 
 .hero__content{
   display: grid;
+  width: 100vw;
   grid-template-columns: 1.1fr .9fr;
   gap: 32px;
   align-items: center;
@@ -95,7 +97,7 @@
   gap: 10px;
   font-size: 1rem;
   color: var(--text);
-  background: rgba(148,163,184,.06);
+  background:rgba(0, 0, 0, 0.843);
   border: 1px solid var(--border);
   padding: .7rem .9rem;
   border-radius: 12px;
@@ -110,8 +112,22 @@
   display: flex;
   gap: 12px;
   margin-top: 16px;
+  
 }
 
+.hero__actions a{
+  background-color: #04f4f8;
+  flex: 1;
+  text-align: center;
+}
+
+.hero__actions a:hover{
+  background-color: white;
+  border: 2px solid black;
+  
+  color: #0b1020;
+  transform: translateY(-1px);
+}
 .hero__dots{
   display: flex; gap: 8px; margin-top: 16px;
 }
@@ -217,8 +233,8 @@
 
 .serviceCard{
   scroll-snap-align: start;
-  background: linear-gradient(180deg, rgba(148,163,184,.06), rgba(148,163,184,.02));
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.707);
+  border: 2px solid black;
   border-radius: 18px;
   padding: 18px;
   min-height: 180px;
@@ -232,10 +248,10 @@
   box-shadow: var(--shadow);
 }
 .serviceCard__title{ font-weight: 700; font-size: 1.05rem; }
-.serviceCard__desc{ color: var(--muted); line-height: 1.5; }
+.serviceCard__desc{ color:blue  }
 .serviceCard__cta{
   margin-top: 6px;
-  color: #a7f3d0;
+  color: #ff9d00;
   text-decoration: none;
   font-weight: 600;
 }
@@ -266,3 +282,8 @@
   border-color: #cbd5e1;
   box-shadow: var(--shadow);
 }
+
+
+
+
+

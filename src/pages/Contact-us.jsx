@@ -63,8 +63,8 @@ export default function ContactUs() {
                 <a href="tel:+919811469694" className="cu-link">
                   +91&nbsp;9811469694
                 </a>
-                <a href="mailto:contact@augutsya.com" className="cu-link">
-                  contact@augutsya.com
+                <a href="mailto:contact-us@augutsya.com" className="cu-link">
+                  contact-us@augutsya.com
                 </a>
               </address>
             </article>
