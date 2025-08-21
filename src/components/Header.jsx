@@ -253,7 +253,7 @@ export default function Header({ newsItems = [] }) {
                     <img
                       className="site-logo"
                       // src="https://www.augutsya.com/wp-content/uploads/2020/08/atplogo_new-copy.png"
-                      src="atp"
+                      src="../atplogo_white.png"
                       alt="Augutsya"
                       width="217"
                       height="35"

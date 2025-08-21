@@ -60,6 +60,7 @@ header.header {
     ;
 }
 
+
 .main_news {
   overflow: hidden;
   border-radius: 8px;
@@ -147,7 +148,7 @@ header.header {
   padding: 8px 2px;
   font-weight: 600;
   letter-spacing: .02em;
-  color: black;
+  color: white;
   text-decoration: none;
   transition: color .18s ease;
 }
