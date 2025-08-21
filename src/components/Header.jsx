@@ -252,7 +252,8 @@ export default function Header({ newsItems = [] }) {
                   <a href="https://www.augutsya.com/" title="Augutsya">
                     <img
                       className="site-logo"
-                      src="https://www.augutsya.com/wp-content/uploads/2020/08/atplogo_new-copy.png"
+                      // src="https://www.augutsya.com/wp-content/uploads/2020/08/atplogo_new-copy.png"
+                      src="atp"
                       alt="Augutsya"
                       width="217"
                       height="35"
