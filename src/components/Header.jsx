@@ -156,7 +156,7 @@ function useGeolocationCity() {
         setRegion(foundRegion);
         setCountry(foundCountry);
       })
-      .catch(() => {});
+      .catch(() => { });
     return () => controller.abort();
   }, [coords]);
 

@@ -25,7 +25,7 @@ header.header {
 #cover.cover {
   display: grid;
   gap: 8px;
-  padding: 8px 0 10px;
+  padding: 0px 0 10px;
   border-bottom: 1px dashed var(--border);
 }
 

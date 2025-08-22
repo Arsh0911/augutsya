@@ -140,11 +140,11 @@ function Hero() {
             ))}
           </ul>
 
-          <div className="hero__actions">
-            <a className="btn" href="/contact">
+          <div className="hero__action">
+            <a className="btnn" href="/contact">
               Get Consultation
             </a>
-            <a className="btn" href="/about">
+            <a className="btnn" href="/about">
               Learn more
             </a>
           </div>
