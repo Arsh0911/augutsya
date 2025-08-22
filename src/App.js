@@ -8,7 +8,7 @@ import Store from './pages/Store';
 import Utilities from './pages/Utilities';
 import ContactUs from './pages/Contact-us';
 import AboutUs from './pages/About-us'; 
-
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 
 
@@ -24,6 +24,7 @@ export default function App() {
         <Route path="/utilities" element={<Utilities />} />
         <Route path="/contact-us" element={<ContactUs />} />
        <Route path="/about" element={<AboutUs />} />
+       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         
       </Routes>
       <Footer />

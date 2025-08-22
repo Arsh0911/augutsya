@@ -1,0 +1,96 @@
+/* Page shell */
+.pp {
+  color: #0f172a;
+  background: #fff;
+  font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial;
+}
+
+.pp-accent { height: 6px; background: #0b1f4d; } /* matches site accent */
+
+/* Wrapper */
+.pp-wrap { padding: 28px 0 80px; }
+
+/* Head */
+.pp-head { margin-bottom: 16px; }
+.pp-eyebrow {
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: .08em;
+  color: #1e3a8a;
+  font-weight: 800;
+}
+.pp-title {
+  margin: 0;
+  color: #0b2b5c;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-size: clamp(28px, 3.6vw, 42px);
+}
+.pp-meta { margin: 6px 0 0; color: #475569; }
+.pp-link { color: #0b2b5c; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.pp-link:hover { opacity: .9; }
+
+/* TOC */
+.pp-toc {
+  margin: 18px 0 22px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.pp-toc__label {
+  display: inline-block;
+  color: #0b2b5c;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.pp-toc ol {
+  margin: 0;
+  padding-left: 18px;
+  columns: 1;
+}
+@media (min-width: 720px) {
+  .pp-toc ol { columns: 2; }
+}
+.pp-toc a { color: #0b2b5c; text-decoration: none; }
+.pp-toc a:hover { text-decoration: underline; }
+
+/* Body */
+.pp-body { max-width: 900px; }
+.pp-body h2 {
+  margin: 22px 0 8px;
+  color: #0b2b5c;
+  font-size: clamp(20px, 2.4vw, 28px);
+  font-weight: 900;
+}
+.pp-body h3 {
+  margin: 14px 0 6px;
+  color: #0f1e35;
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 800;
+}
+.pp-body p { margin: 8px 0 12px; color: #0f172a; }
+.pp-body ul { margin: 8px 0 12px 18px; }
+.pp-body li { margin: 4px 0; }
+
+/* Cards / Addresses */
+.pp-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 12px 28px rgba(2, 6, 23, 0.06);
+}
+.pp-disclaimer {
+  margin-top: 12px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Print helpers */
+@media print {
+  .pp-accent, .pp-toc { display: none; }
+  .pp-wrap { padding: 0; }
+  .pp-link { text-decoration: none; color: #000; }
+}

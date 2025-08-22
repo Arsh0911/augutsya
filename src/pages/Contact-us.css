@@ -1,67 +1,70 @@
-/* Page shell */
+/* Page shell (match Home’s clean, premium look) */
 .cu {
   color: #0f172a;
   background: #fff;
   font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu;
 }
 
-.cu-accent {
-  height: 6px;
-  background: #0b1f4d; /* deep navy accent */
+.cu-accent { height: 6px; background: #0b1f4d; }
+
+/* Section shell */
+.cu-wrap { padding: 28px 0 64px; }
+
+/* Page header */
+.cu-head { text-align: left; margin-bottom: 18px; }
+.cu-eyebrow {
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #1e3a8a;
+  opacity: .9;
+  margin: 0 0 6px;
+  font-size: 12px;
 }
+.cu-title {
+  margin: 0 0 6px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #0b2b5c;
+  font-size: clamp(28px, 3.6vw, 42px);
+}
+.cu-sub { margin: 0; color: #475569; }
 
 /* Layout */
-.cu-wrap {
-  width: min(1200px, 92%);
-  margin: 28px auto 60px;
-}
-
 .cu-grid {
   display: grid;
   grid-template-columns: 1.05fr 1fr;
-  gap: clamp(16px, 3vw, 32px);
+  gap: clamp(18px, 3vw, 32px);
   align-items: start;
+  margin-top: 22px;
 }
 @media (max-width: 980px) {
   .cu-grid { grid-template-columns: 1fr; }
 }
 
-/* Heading */
-.cu-title {
-  margin: 8px 0 22px;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  color: #0b2b5c; /* navy */
-  font-size: clamp(28px, 3.6vw, 42px);
+/* Left column cards */
+.cu-left { display: grid; gap: 14px; }
+
+/* Reusable card block to align with Home’s soft-shadow aesthetic */
+.cu-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 12px 28px rgba(2, 6, 23, 0.06);
 }
+.cu-card--tone { background: #f8fafc; border-color: #e2e8f0; }
 
-/* Info blocks */
-.cu-left { padding-right: clamp(0px, 1vw, 12px); }
-
-.cu-block {
-  padding: 14px 0 18px;
-  border-bottom: 1px dashed #e5e7eb;
-}
-.cu-block:last-child { border-bottom: 0; }
-
-.cu-block-title {
+.cu-card-title {
   margin: 0 0 6px;
   color: #0b2b5c;
   font-weight: 800;
   font-size: clamp(18px, 2.2vw, 22px);
 }
 
-.cu-muted {
-  margin: 0 0 6px;
-  color: #6b7280;
-  font-weight: 600;
-}
+.cu-muted { margin: 0 0 6px; color: #64748b; font-weight: 600; }
 
-.cu-address {
-  display: grid;
-  gap: 6px;
-  margin-top: 6px;
-}
+.cu-address { display: grid; gap: 6px; margin-top: 6px; }
 
 .cu-link {
   color: #0b2b5c;
@@ -71,40 +74,56 @@
 }
 .cu-link:hover { opacity: .9; }
 
+/* Profile row (with larger image for a more premium presence) */
+.cu-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cu-profile-img {
+  width: clamp(88px, 10vw, 120px);   /* bigger avatar */
+  height: clamp(88px, 10vw, 120px);
+  object-fit: cover;
+  border-radius: 16px;               /* subtle rounded rectangle (more executive) */
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.15);
+  border: 1px solid #e5e7eb;
+}
+@media (max-width: 520px) {
+  .cu-profile-img { border-radius: 12px; }
+}
+
+.cu-profile-meta { display: grid; gap: 2px; }
+
 /* Form */
 .cu-form {
   background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 14px;
-  padding: clamp(14px, 2.6vw, 22px);
+  padding: clamp(16px, 2.8vw, 24px);
   box-shadow: 0 12px 28px rgba(2, 6, 23, 0.06);
   display: grid;
   gap: 12px;
 }
 
 .cu-field { display: grid; gap: 6px; }
-.cu-field label {
-  font-weight: 700;
-  color: #1f2937;
-}
-.cu-field input,
-.cu-field textarea {
+.cu-field label { font-weight: 700; color: #1f2937; }
+.cu-field input, .cu-field textarea {
   width: 100%;
   background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
   padding: 12px 14px;
   outline: none;
-  transition: border-color .12s ease, box-shadow .12s ease;
+  transition: border-color .12s ease, box-shadow .12s ease, transform .06s ease;
 }
-.cu-field input:focus,
-.cu-field textarea:focus {
+.cu-field input:focus, .cu-field textarea:focus {
   border-color: #0b2b5c;
   box-shadow: 0 0 0 4px rgba(11, 43, 92, .15);
 }
 .cu-field textarea { resize: vertical; }
 
-/* Button (wide blue bar style) */
+/* Button – matches Home’s bold CTAs */
 .cu-btn {
   margin-top: 8px;
   width: 100%;
@@ -122,6 +141,7 @@
 }
 .cu-btn:hover { filter: brightness(1.05); transform: translateY(-1px); }
 .cu-btn:disabled { opacity: .7; cursor: not-allowed; }
+.cu-privacy { margin: 6px 0 0; font-size: 12px; color: #64748b; }
 
 /* Alerts */
 .cu-alert {
@@ -130,15 +150,8 @@
   border: 1px solid;
   font-weight: 700;
 }
-.cu-alert--info {
-  background: #eff6ff; border-color: #bfdbfe; color: #1e40af;
-}
-.cu-alert--success {
-  background: #ecfdf5; border-color: #a7f3d0; color: #065f46;
-}
+.cu-alert--info { background: #eff6ff; border-color: #bfdbfe; color: #1e40af; }
+.cu-alert--success { background: #ecfdf5; border-color: #a7f3d0; color: #065f46; }
 
-/* Bottom strip to mirror site footer */
-.cu-footerbar {
-  height: 44px;
-  background: #0b1f4d;
-}
+/* Bottom strip */
+.cu-footerbar { height: 44px; background: #0b1f4d; }
