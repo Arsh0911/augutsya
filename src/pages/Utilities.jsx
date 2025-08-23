@@ -7,96 +7,105 @@ import "./Utilities.css";
  */
 export default function Utilities() {
   const items = [
+      {
+      name: "Augutsya",
+      href: "https://www.augutsya.com/",
+      img: "../atplogo_white.png",
+    },
     {
       name: "BSES Yamuna",
       href: "https://www.bsesdelhi.com/web/bypl/quick-pay?paytm/",
-      img: "https://www.augutsya.com/wp-content/uploads/2020/08/bsesyamuna.png",
+      img: "../bsesyamuna.png",
     },
     {
       name: "Tata Power-DDL",
       href: "https://www.tatapower-ddl.com/billpay/paybillonline.aspx/",
-      img: "https://www.augutsya.com/wp-content/uploads/2020/08/tatapower.png",
+      img: "../tatapower.png",
     },
     {
       name: "IGL",
       href: "https://www.iglonline.net/english/Default.aspx",
-      img: "https://www.augutsya.com/wp-content/uploads/2020/08/igl.png",
+      img: "../igl.png",
     },
     {
       name: "BSES Delhi (BRPL)",
       href: "https://www.bsesdelhi.com/web/brpl/quick-pay?billDesk/",
-      img: "https://www.augutsya.com/wp-content/uploads/2020/08/bsesdelhi.png",
+      img: "../bsesdelhi.png",
     },
     {
       name: "IRCTC",
       href: "https://www.irctc.co.in/nget/train-search",
-      img: "https://www.augutsya.com/wp-content/uploads/2020/08/irctc.png",
+      img: "../irctc.png",
     },
-    {
-      name: "MakeMyTrip",
-      href: "https://www.makemytrip.com/",
-      img: "https://www.augutsya.com/wp-content/uploads/2020/08/mmyt.png",
-    },
+    
     {
       name: "NVSP (Voter Services)",
       href: "https://www.nvsp.in/Account/Login",
-      img: "https://www.augutsya.com/wp-content/uploads/2020/08/voterid.png",
+      img: "../voterid.png",
     },
-    {
-      name: "Passport Seva",
-      href: "https://portal2.passportindia.gov.in/AppOnlineProject/user/RegistrationBaseAction?request_locale=en",
-      img: "https://www.augutsya.com/wp-content/uploads/2020/08/passportseva.png",
-    },
+    
     {
       name: "UIDAI (Aadhaar)",
       href: "https://uidai.gov.in/my-aadhaar/get-aadhaar.html",
-      img: "https://www.augutsya.com/wp-content/uploads/2020/08/aadhar-copy.png",
+      img: "../aadhar.png",
     },
     {
       name: "PAN (NSDL)",
       href: "https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html",
-      img: "https://www.augutsya.com/wp-content/uploads/2020/08/pancard.png",
+      img: "../pancard.png",
     },
     {
       name: "TIN (e-Tax NSDL)",
       href: "https://onlineservices.tin.egov-nsdl.com/etaxnew/tdsnontds.jsp",
-      img: "https://www.augutsya.com/wp-content/uploads/2020/08/tinlogo.png",
+      img: "../tinlogo.png",
     },
     {
       name: "Income Tax e-Filing",
       href: "https://eportal.incometax.gov.in/iec/foservices/#/login",
-      img: "https://www.augutsya.com/wp-content/uploads/2020/08/income_tax.png",
+      img: "../incometax.png",
+    },
+        {
+      name: "Passport Seva",
+      href: "https://www.passportindia.gov.in/",
+      img: "../passportseva.png",
     },
     {
       name: "Airtel Selfcare",
       href: "https://www.airtel.in/s/selfcare?normalLogin",
-      img: "https://www.augutsya.com/wp-content/uploads/2020/08/airtel.png",
+      img: "../airtel.png",
     },
+    {
+      name: "JIO",
+      href: "https://jio.com",
+      img: "../jiologo.jpeg",
+    },
+    {
+      name: "MakeMyTrip",
+      href: "https://makemytrip.com",
+      img: "../mmyt.png",
+    },
+
     {
       name: "Paytm",
       href: "https://www.paytm.com/".replace("www.", ""), // avoids some CSP issues
-      img: "https://www.augutsya.com/wp-content/uploads/2020/08/paytmlogo.png",
+      img: "../paytm.png",
     },
     {
       name: "Amazon India",
       href: "https://www.amazon.in/",
-      img: "https://www.augutsya.com/wp-content/uploads/2020/08/amazon.png",
+      img: "../amazon.png",
     },
     {
       name: "HDFC PayZapp",
       href: "https://payzapp.biz.hdfcbank.com/HDFCPayZapp/Account/Login.aspx",
-      img: "https://www.augutsya.com/wp-content/uploads/2020/08/payzapp.png",
+      img: "../payzapp.png",
     },
     {
       name: "Moneycontrol",
       href: "https://www.moneycontrol.com/",
-      img: "https://www.augutsya.com/wp-content/uploads/2020/08/moneycontrol.png",
+      img: "../moneycontrol.png",
     },
-    {
-      name: "ClearTax",
-      href: "https://cleartax.in/",
-      img: "https://www.augutsya.com/wp-content/uploads/2020/08/cleartax-222x220.png",
-    },
+  
   ];
 
   return (
