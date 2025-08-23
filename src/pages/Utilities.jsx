@@ -10,7 +10,7 @@ export default function Utilities() {
       {
       name: "Augutsya",
       href: "https://www.augutsya.com/",
-      img: "../atplogo_white.png",
+      img: "/atpwhite.png",
     },
     {
       name: "BSES Yamuna",

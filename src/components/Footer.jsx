@@ -16,8 +16,8 @@ export default function Footer() {
             <a className="ftBrand__line" href="/" aria-label="Augutsya home">
               <img
                 className="ftBrand__logo"
-                src="../atplogo_white.png"
-                alt="Augutsya logo"
+                src="/atpwhite.png"
+                alt="Augutsya"
                 width="160"
                 height="48"
                 loading="lazy"

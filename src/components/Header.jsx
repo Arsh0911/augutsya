@@ -357,7 +357,7 @@ export default function Header() {
                     <a href="https://www.augutsya.com/" title="Augutsya">
                       <img
                         className="site-logo"
-                        src="../atplogo_white.png"
+                        src="/atpwhite.png"
                         alt="Augutsya"
                         width="217"
                         height="35"
