@@ -1,6 +1,7 @@
 // src/pages/Store.jsx
 import { useEffect, useMemo, useRef, useState } from "react";
 import "./Store.css";
+import AuthForm from "../components/AuthForm"; // login/register form
 
 const CURRENCY = "INR";
 const fmt = new Intl.NumberFormat("en-IN", {
@@ -41,7 +42,7 @@ export default function Store() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Fallback mock data with vegan product images
+  // Mock fallback products
   const MOCK = useRef([
     {
       id: 1,
@@ -111,6 +112,7 @@ export default function Store() {
     };
   }, []);
 
+  // Filters & search
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("all");
   const [sort, setSort] = useState("relevance");
@@ -161,6 +163,7 @@ export default function Store() {
     return list;
   }, [products, query, category, sort, minPrice, maxPrice]);
 
+  // Cart state
   const [cartOpen, setCartOpen] = useState(false);
   const [cart, setCart] = useState(() => {
     try {
@@ -212,12 +215,28 @@ export default function Store() {
     setMaxPrice("");
   };
 
+  // 🔹 Auth State
+  const [user, setUser] = useState(null);
+  const [authOpen, setAuthOpen] = useState(false);
+
+  const handleCheckout = () => {
+    if (!user) {
+      // if not logged in, open login/register
+      setAuthOpen(true);
+      return;
+    }
+    alert("✅ Proceed to payment gateway (user is logged in)");
+  };
+
   return (
     <>
-      {/* Colorful gradient hero */}
+      {/* Header */}
       <section className="wc-hero">
         <div className="wc-hero-inner">
           <div>
+            <span className="wc-badge-soft">
+              <h2>Store Under Maintenance. No real orders can be placed</h2>
+            </span>
             <span className="wc-badge-soft">Cruelty-free • Cactus leather</span>
             <h1 className="wc-h1">Aeon &amp; Co — Store</h1>
             <p className="wc-sub">
@@ -228,6 +247,16 @@ export default function Store() {
           </div>
 
           <div className="wc-header-right">
+            {user ? (
+              <button
+                className="wc-cart-btn"
+                onClick={() => setUser(null)}
+                title="Logout"
+              >
+                Logout {user.name || user.email}
+              </button>
+            ) : null}
+
             <button
               className="wc-cart-btn wc-cart-btn--solid"
               onClick={() => setCartOpen(true)}
@@ -385,16 +414,39 @@ export default function Store() {
           <div className="wc-subtotal">
             Subtotal: <strong>{fmt.format(subtotal / 100)}</strong>
           </div>
-          <button
-            className="wc-btn wc-btn--block"
-            onClick={() => alert("Plug your checkout flow here")}
-          >
+          <button className="wc-btn wc-btn--block" onClick={handleCheckout}>
             Checkout
           </button>
         </div>
       </aside>
 
-      {cartOpen && <div className="wc-backdrop" onClick={() => setCartOpen(false)} />}
+      {cartOpen && (
+        <div className="wc-backdrop" onClick={() => setCartOpen(false)} />
+      )}
+
+      {/* 🔹 Auth Modal (opens only when checkout without login) */}
+      {authOpen && (
+        <div className="wc-backdrop" onClick={() => setAuthOpen(false)}>
+          <div
+            style={{
+              background: "#fff",
+              padding: "20px",
+              borderRadius: "12px",
+              maxWidth: "400px",
+              margin: "80px auto",
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <AuthForm
+              onAuthSuccess={(u) => {
+                setUser(u);
+                setAuthOpen(false);
+                alert("✅ Logged in! Continue checkout...");
+              }}
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }
